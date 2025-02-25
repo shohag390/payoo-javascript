@@ -8,23 +8,114 @@
     <title>Payoo Home</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/9753b0a825.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-slate-800">
 
     <section class="max-w-md min-h-screen mx-auto py-5 bg-gray-200 px-[20px]">
-        <nav class="flex items-center justify-between">
-            <div class="flex items-center">
+
+        <!-- Navbar here -->
+        <nav class="flex items-center justify-between border-b-[1px] border-[#cfcccc] pb-[20px]">
+            <div class="flex items-center gap-[6px]">
                 <img class="h-[50px]" src="./assets/Group.png" alt="">
                 <div>
-                    <h4>$45000</h4>
-                    <p>Available Balance</p>
+                    <h4 class="font-bold text-[18px]">$ <span id="main-blance">4500</span>
+                    </h4>
+                    <p class="text-[#575555] font-medium">Available Balance</p>
                 </div>
             </div>
-            <button class=""> Log Out</button>
+            <button
+                class="border-[1px] border-[#0069fc] px-[20px] py-[6px] rounded-full hover:bg-[#0069fc] font-semibold hover:text-[#ffff] duration-500">
+                Log-Out</button>
         </nav>
 
+
+        <!-- Button Function -->
+        <section class="">
+            <h4 class="text-[25px] font-bold pt-[25px]"><i class="fa-solid fa-fire text-[#eb6200]"></i> Welcome to
+                Payoo!</h4>
+            <p class="text-[#575555] font-medium pt-[5px]">Enjoy easy and convenient financial services with us. Cashout
+                charge
+                is low and
+            </p>
+
+            <div class="grid grid-cols-3 gap-[10px] pt-[30px]">
+                <div
+                    class="flex items-center justify-center flex-col py-[20px] border-[1px] rounded-2xl border-[#cfcccc]">
+                    <img class="w-8" src="./assets/wallet1.png" alt="">
+                    <p class="font-semibold text-[#575555] pt-[5px]">Add Money</p>
+                </div>
+                <div
+                    class="flex items-center justify-center flex-col py-[20px] border-[1px] rounded-2xl border-[#cfcccc]">
+                    <img class="w-8" src="./assets/send1.png" alt="">
+                    <p class="font-semibold text-[#575555] pt-[5px]">Cashout</p>
+                </div>
+                <div
+                    class="flex items-center justify-center flex-col py-[20px] border-[1px] rounded-2xl border-[#cfcccc]">
+                    <img class="w-8" src="./assets/money1.png" alt="">
+                    <p class="font-semibold text-[#575555] pt-[5px]">Transfer</p>
+                </div>
+                <div
+                    class="flex items-center justify-center flex-col py-[20px] border-[1px] rounded-2xl border-[#cfcccc]">
+                    <img class="w-8" src="./assets/bonus1.png" alt="">
+                    <p class="font-semibold text-[#575555] pt-[5px]">Get Bonus</p>
+                </div>
+                <div
+                    class="flex items-center justify-center flex-col py-[20px] border-[1px] rounded-2xl border-[#cfcccc]">
+                    <img class="w-8" src="./assets/purse1.png" alt="">
+                    <p class="font-semibold text-[#575555] pt-[5px]">Pay Bill</p>
+                </div>
+                <div
+                    class="flex items-center justify-center flex-col py-[20px] border-[1px] rounded-2xl border-[#cfcccc]">
+                    <img class="w-8" src="./assets/transaction1.png" alt="">
+                    <p class="font-semibold text-[#575555] pt-[5px]">Transactions</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Add Money -->
+        <section id="" class="pt-[20px] pb-[25px]">
+            <h4 class="font-semibold text-[20px] pb-[15px]">Add Money</h4>
+            <form class="flex flex-col gap-[10px]">
+                <div class="flex flex-col gap-[5px]">
+                    <label class="font-medium text-[#575555]">Select Bank</label>
+                    <select
+                        class="border-[1px] border-[#cfcccc] py-[10px] px-[20px] rounded-full bg-gray-200 outline-none">
+                        <option value="select">Select</option>
+                        <option value="Bkash">Bkash</option>
+                        <option value="dbbl">DBBL</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-[5px]">
+                    <label class="font-medium text-[#575555]">Bank Account Number</label>
+                    <input id="phone" value="01315390470"
+                        class="border-[1px] border-[#cfcccc] py-[10px] px-[20px] rounded-full outline-none"
+                        type="number" placeholder="Account Number">
+                </div>
+                <div class="flex flex-col gap-[5px]">
+                    <label class="font-medium text-[#575555]">Amount to Add</label>
+                    <input id="amound"
+                        class="border-[1px] border-[#cfcccc] py-[10px] px-[20px] rounded-full outline-none"
+                        type="number" placeholder="Amount">
+                </div>
+                <div class="flex flex-col gap-[5px]">
+                    <label class="font-medium text-[#575555]">Pin Number</label>
+                    <input id="pin" class="border-[1px] border-[#cfcccc] py-[10px] px-[20px] rounded-full outline-none"
+                        value="1234" type="number">
+                </div>
+                <button id="add-money"
+                    class="py-[10px] mt-[10px] w-full bg-[#0069fc] text-white font-semibold text-[18px] rounded-full duration-500 hover:bg-[#0f5ecb]">Add
+                    Money</button>
+            </form>
+        </section>
+
     </section>
+
+
+    <script src="./js/addMoney.js"></script>
 
 </body>
 
