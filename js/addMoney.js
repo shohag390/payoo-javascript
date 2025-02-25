@@ -9,11 +9,16 @@ document.getElementById("add-money").addEventListener("click", function (e) {
     console.log(convertedMainBlance);
 
     if (convertedPin === 1234) {
-        const sum = convertedMainBlance + convertedAmount;
-        document.getElementById("main-blance").innerText = sum;
-        alert("Money Added")
+        if (convertedMainBlance + convertedAmount <= 25000) {
+            const sum = convertedMainBlance + convertedAmount;
+            document.getElementById("main-blance").innerText = sum;
+            alert("Money Added")
+        }
+        else {
+            alert("Your Account Stor Full")
+        }
     } else {
-        alert("Your Pin is incurrect")
+        alert("Your Pin Is Incorrect")
     }
 
 })
