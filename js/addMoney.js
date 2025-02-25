@@ -11,9 +11,9 @@ document.getElementById("add-money").addEventListener("click", function (e) {
     if (convertedPin === 1234) {
         const sum = convertedMainBlance + convertedAmount;
         document.getElementById("main-blance").innerText = sum;
+        alert("Money Added")
     } else {
-        console.log("Invalid Pin");
-
+        alert("Your Pin is incurrect")
     }
 
 })
